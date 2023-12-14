@@ -14,23 +14,39 @@
         }
 
         div#q1 {
-            background-color: aquamarine;
+            background-image: url('../ex01/imagens/wallpaper003.jpg');
+            background-position: left top;
         }
 
         div#q2 {
-            background-image: linear-gradient(to right, yellow , blue);
+            background-image: url('../ex01/imagens/wallpaper003.jpg');
+            background-position: center center;
         }
 
         div#q3 {
-            background-image: url("imagens/pattern002.png");
-            background-repeat: repeat-y;
+            background-image: url('../ex01/imagens/wallpaper003.jpg');
+            background-position: right bottom;
+            
         }
+        /* Shorthand - background
+            color > image > position > repeat > (size) - não está funcionando no shorthand > attachment
+            
+            Ex:
+            body {
+                height: 100vh;
+                background-color: black;
+                background-image: url();
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background- attachment: fixed;
+            }*/
     </style>
     <title>Quadrados</title>
 </head>
 <body>
     <div class="quadrado" id="q1"></div>
-
+    
     <div class="quadrado" id="q2"></div>
 
     <div class="quadrado" id="q3"></div>
