@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* Todas as demais mídias*/
+
+/* Typical Device Breakpoints
+-------------------------------
+
+Smartphones (Retrato):
+Menos de 600 pixels de largura (pode variar dependendo do design).
+
+Smartphones (Paisagem):
+De 600 a 767 pixels de largura.
+
+Tablets:
+De 768 a 991 pixels de largura.
+
+Laptops e Desktops (Pequenos):
+De 992 a 1199 pixels de largura.
+
+Laptops e Desktops (Médios):
+De 1200 a 1439 pixels de largura.
+
+Laptops e Desktops (Grandes):
+1440 pixels de largura e acima.
+*/
+
+
+@media print {
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background: url("back-print.jpg") /* Desnecessário */;
+        }
+
+        main {
+            border:  2px solid black;
+        }
+        main h1 {
+            text-shadow: none;
+            color: black;
+        }
+
+        img {
+            margin: auto;
+        }
+        
+        #phone {display: none;}
+        #tablet {display: none;}
+        #desktop {display: none;}
+        #tv {display: none;}
+        #print {display: block;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        background: url("back-tablet.jpg") no-repeat;
+    }
+
+    img {
+        margin: auto;
+    }
+    
+    #phone {display: none;}
+    #tablet {display: block;}
+    #desktop {display: none;}
+    #tv {display: none;}
+    #print {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 11990px) {
+    body {
+        background: url("back-pc.jpg") no-repeat;
+    }
+
+    img {
+        margin: auto;
+    }
+    
+    #phone {display: none;}
+    #tablet {display: none;}
+    #desktop {display: block;}
+    #tv {display: none;}
+    #print {display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background: url("back-tv.jpg") no-repeat;
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img {
+        margin: auto;
+    }
+    
+    #phone {display: none;}
+    #tablet {display: none;}
+    #desktop {display: none;}
+    #tv {display: block;}
+    #print {display: none;}
+
+}
